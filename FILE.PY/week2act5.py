@@ -12,10 +12,10 @@ def main():
     
     sentence = input("Enter a sentence: ")
 
-    # Create object of WordCounter class
+    # Create object of WordCount class
     wc = WordCount(sentence)
 
-    # Print the result
+
     print("Number of words:", wc.countwords())
 
 if __name__ == "__main__":
