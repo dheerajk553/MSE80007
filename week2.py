@@ -4,7 +4,8 @@ import string
 def blanks(len):
 
     letter = string.ascii_lowercase
-    return ''.join(random.choice(letter) for _ in range(len))
+    return ''.join(random.choice(letter) 
+                   for _ in range(len))
     print("enter any name or type any anything")
 totalruntime=5
 word = blanks(6)

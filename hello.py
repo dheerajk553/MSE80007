@@ -11,3 +11,6 @@ if a > b:
 elif d > b:
   print(d)
   print("d is bigger")
+  #print("Enter your name:")
+name = input("enter your name")
+print(f"Hello {name}")
