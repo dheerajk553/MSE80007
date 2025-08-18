@@ -1,0 +1,23 @@
+Database for the Yoobee Clg
+Admin: 1 Admin
+Students: 5 Students>> Student Name> Student ID> Student Course> Student Intake> Student End Time.
+lecturers: 2 Lectures>> Name1> Name2
+Time: Morning> Evening
+
+I want to Design a Database for the Admin At Yoobee Clg
+In admin One person will handle the administration work like Student record. How many total students. Roll Number. Course record. Intake Record Fees Pending. 
+The Main entities is Admin
+ Student is another entities
+The features of the student entities are Student name, student id, student intake, Student course, Address.
+Teacher is more entities
+The features of Teacher entities are Teacher ID, Teacher Name, Course ID.
+
+Relationships
+
+Admin → manages → Student, Teacher, Course, Intake (1-to-many)
+
+Student → enrolled in → Course (many-to-1)
+
+Student → belongs to → Intake (many-to-1)
+
+Teacher → teaches → Course (many-to-1)
