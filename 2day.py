@@ -7,7 +7,7 @@ def main():
     avgtemp = calavgtemp(temp)
     highesttemp = np.max(temp)
     lowesttemp = np.min(temp)
-    print(f" Average temperature for the week is: {avgtemp:.2f} °C")
+    print(f" Average temperature of the week is: {avgtemp:.2f} °C")
     print(f"Highest  temperature: {highesttemp:.2f} °C")
     print(f"Lowest  temperature: {lowesttemp:.2f} °C")
 # call main function
