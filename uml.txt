@@ -1,0 +1,20 @@
+I Am writing a scope of project of my Yoobee Collage that define the total actor and number of Use cases.
+I have Total 3 Actor in my Yoobee Project.
+	Admin: 
+Admin will Manage all the Student Record, Teachers Records
+	Student
+Students have access their class, roll number, ID, Fee Pending
+	Teachers
+Teachers have Access Teacher ID, Student Name, Intake Record. Student Roll No.
+
+And Total 9 Use Cases are
+	a. Student Record: 
+	b. Intake Record
+	c. Student Roll No.
+	d. Fee Pending
+	e. Teacher Name
+	f. Teacher ID
+	g. Student Name
+	h. Student Address
+	I. Course Name
+	
