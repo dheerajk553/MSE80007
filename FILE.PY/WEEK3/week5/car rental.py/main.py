@@ -7,36 +7,50 @@ def view_available_cars():
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM Car WHERE is_available = 1")
     cars = cursor.fetchall()
+    print("\nAvailable Cars:")
     for car in cars:
-        print(car)
+        print(f"Car ID: {car[0]}, Model: {car[1]}, Brand: {car[2]}, Price/Day: {car[3]}")
     conn.close()
 
 def main():
-    print("Welcome to Kumar's Car Rental System")
-    print("1. Rent a Car")
-    print("2. Make a Payment")
-    print("3. Exit")
+    while True:
+        print("\nWelcome to Kumar's Car Rental System")
+        print("1. View Available Cars")
+        print("2. Rent a Car")
+        print("3. Make a Payment")
+        print("4. Exit")
 
-    choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ")
 
-    choice = input("Enter your choice: ")
-    if choice == "1":
-        customer_id = int(input("Enter Customer ID: "))
-        car_id = int(input("Enter Car ID: "))
-        rent_date = input("Enter Rent Date (YYYY-MM-DD): ")
-        return_date = input("Enter Return Date (YYYY-MM-DD): ")
+        if choice == "1":
+            view_available_cars()
 
-        add_rental(customer_id, car_id, rent_date, return_date)
+        elif choice == "2":
+            view_available_cars()
+            try:
+                customer_id = int(input("Enter Customer ID: "))
+                car_id = int(input("Enter Car ID: "))
+                rent_date = input("Enter Rent Date (YYYY-MM-DD): ")
+                return_date = input("Enter Return Date (YYYY-MM-DD): ")
+                add_rental(customer_id, car_id, rent_date, return_date)
+            except ValueError:
+                print("Invalid input. Please enter numeric values where required.")
 
-    elif choice == "2":
-        rental_id = int(input("Enter Rental ID: "))
-        amount = float(input("Enter Payment Amount: "))
-        method = input("Enter Payment Method (Online/Cash): ")
+        elif choice == "3":
+            try:
+                rental_id = int(input("Enter Rental ID: "))
+                amount = float(input("Enter Payment Amount: "))
+                method = input("Enter Payment Method (Online/Cash): ")
+                process_payment(rental_id, amount, method)
+            except ValueError:
+                print("Invalid input. Please enter correct values.")
 
-        process_payment(rental_id, amount, method)
+        elif choice == "4":
+            print("Goodbye!")
+            break
 
-    else:
-        print("Goodbye!")
+        else:
+            print("Invalid choice. Please select a valid option.")
 
 if __name__ == "__main__":
     main()
