@@ -13,7 +13,6 @@ class Circle(Shape):
     def draw(self) -> str:
         return "Drawing a Circle"
 
-
 class Square(Shape):
     def draw(self) -> str:
         return "Drawing a Square"
@@ -55,6 +54,8 @@ if __name__ == "__main__":
 
     square = factory.create("square")
     print(square.draw())
-    
+
     triangle = factory.create("triangle")
     print(triangle.draw())
+    # Factory Design is centralized.
+    

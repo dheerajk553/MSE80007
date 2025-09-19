@@ -4,7 +4,7 @@ class Circle:
 class Square:
     def draw(self):
         return "Drawing a Square"
-            
+    
 class ShapeFactory:
     def create_shape(self, shape_type):
         if shape_type == "circle":
